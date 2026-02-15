@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK ESPORTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+
+    <!-- HOME PAGE -->
+    <div class="home" id="home">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>RK ESPORTS</h1>
+
+        <div class="social-buttons">
+            <a href="https://vm.tiktok.com/ZS9JnSgar8Jv5-nyNjn/" target="_blank" class="social-btn">
+                <img src="images/tiktok.png" class="social-icon"> Follow TikTok
+            </a>
+        </div>
+
+        <button onclick="enterRegistration()" class="enter-btn">ENTER / Register</button>
+    </div>
+
+    <!-- REGISTRATION PAGE -->
+    <div class="form-section" id="registration">
+
+        <h1>PUBG Tournament Registration</h1>
+
+        <label>Select Map:</label>
+        <select id="map" required>
+            <option value="">Select Map</option>
+            <option>Erangel</option>
+            <option>Livik</option>
+        </select>
+
+        <label>Select Mode:</label>
+        <select id="mode" required>
+            <option value="">Select Mode</option>
+            <option>Solo</option>
+            <option>Duo</option>
+            <option>Squad</option>
+        </select>
+
+        <!-- SOLO FIELDS -->
+        <div id="solo-fields" class="player-fields" style="display:none;">
+            <input type="text" placeholder="Player Name" id="solo-name">
+            <input type="text" placeholder="PUBG ID" id="solo-id">
+        </div>
+
+        <!-- DUO FIELDS -->
+        <div id="duo-fields" class="player-fields" style="display:none;">
+            <input type="text" placeholder="Player 1 Name" id="duo-name1">
+            <input type="text" placeholder="Player 1 PUBG ID" id="duo-id1">
+            <input type="text" placeholder="Player 2 Name" id="duo-name2">
+            <input type="text" placeholder="Player 2 PUBG ID" id="duo-id2">
+        </div>
+
+        <!-- SQUAD FIELDS -->
+        <div id="squad-fields" class="player-fields" style="display:none;">
+            <input type="text" placeholder="Player 1 Name" id="squad-name1">
+            <input type="text" placeholder="Player 1 PUBG ID" id="squad-id1">
+            <input type="text" placeholder="Player 2 Name" id="squad-name2">
+            <input type="text" placeholder="Player 2 PUBG ID" id="squad-id2">
+            <input type="text" placeholder="Player 3 Name" id="squad-name3">
+            <input type="text" placeholder="Player 3 PUBG ID" id="squad-id3">
+            <input type="text" placeholder="Player 4 Name" id="squad-name4">
+            <input type="text" placeholder="Player 4 PUBG ID" id="squad-id4">
+        </div>
+
+        <button onclick="register()" class="submit-btn">Register</button>
+        <p>Click Register → Join WhatsApp group automatically!</p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
