@@ -42,6 +42,6 @@ function register(){
     }
 
     // WhatsApp API
-    let wa_link = "https://api.whatsapp.com/send?phone=+92330228172&text="+encodeURIComponent(message);
+    let wa_link = "https://api.whatsapp.com/send?phone=+923302281172&text="+encodeURIComponent(message);
     window.open(wa_link,"_blank");
 }
