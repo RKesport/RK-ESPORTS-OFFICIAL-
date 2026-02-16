@@ -1,47 +1,45 @@
-// ENTER button
-function enterRegistration(){
-    document.getElementById("home").style.display = "none";
-    document.getElementById("registration").style.display = "block";
+function showForm(){
+    document.getElementById("home").style.display="none";
+    document.getElementById("registration").style.display="block";
 }
 
-// Show fields based on mode
-document.getElementById("mode").addEventListener("change", function(){
-    document.getElementById("solo-fields").style.display = "none";
-    document.getElementById("duo-fields").style.display = "none";
-    document.getElementById("squad-fields").style.display = "none";
+function changeMode(){
+    let mode = document.getElementById("mode").value;
+    let container = document.getElementById("players");
+    container.innerHTML = "";
 
-    if(this.value=="Solo") document.getElementById("solo-fields").style.display="block";
-    if(this.value=="Duo") document.getElementById("duo-fields").style.display="block";
-    if(this.value=="Squad") document.getElementById("squad-fields").style.display="block";
-});
+    let players = 0;
 
-// WhatsApp registration
-function register(){
+    if(mode==="Solo") players = 1;
+    if(mode==="Duo") players = 2;
+    if(mode==="Squad") players = 4;
+
+    for(let i=1;i<=players;i++){
+        container.innerHTML += `
+            <input type="text" id="name${i}" placeholder="Player ${i} Name">
+            <input type="text" id="id${i}" placeholder="Player ${i} PUBG ID">
+        `;
+    }
+}
+
+function sendToWhatsapp(){
     let map = document.getElementById("map").value;
     let mode = document.getElementById("mode").value;
-    let message = "PUBG Tournament Registration:\nMap: "+map+"\nMode: "+mode+"\n";
 
-    if(mode=="Solo"){
-        let name = document.getElementById("solo-name").value;
-        let id = document.getElementById("solo-id").value;
-        message += "Player: "+name+" | ID: "+id;
-    }
-    if(mode=="Duo"){
-        for(let i=1;i<=2;i++){
-            let name = document.getElementById("duo-name"+i).value;
-            let id = document.getElementById("duo-id"+i).value;
-            message += "\nPlayer "+i+": "+name+" | ID: "+id;
-        }
-    }
-    if(mode=="Squad"){
-        for(let i=1;i<=4;i++){
-            let name = document.getElementById("squad-name"+i).value;
-            let id = document.getElementById("squad-id"+i).value;
-            message += "\nPlayer "+i+": "+name+" | ID: "+id;
-        }
+    let message = "PUBG Tournament Registration\n";
+    message += "Map: "+map+"\n";
+    message += "Mode: "+mode+"\n\n";
+
+    let total = 1;
+    if(mode==="Duo") total = 2;
+    if(mode==="Squad") total = 4;
+
+    for(let i=1;i<=total;i++){
+        let name = document.getElementById("name"+i)?.value;
+        let id = document.getElementById("id"+i)?.value;
+        message += "Player "+i+": "+name+" | ID: "+id+"\n";
     }
 
-    // WhatsApp API
-    let wa_link = "https://api.whatsapp.com/send?phone=+923302281172&text="+encodeURIComponent(message);
-    window.open(wa_link,"_blank");
+    let whatsappLink = "https://api.whatsapp.com/send?phone=923302281172&text="+encodeURIComponent(message);
+    window.open(whatsappLink, "_blank");
 }
