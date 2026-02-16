@@ -1,87 +1,74 @@
 body{
     margin:0;
     padding:0;
-    font-family: Arial, sans-serif;
-    background: url('images/background.jpg') no-repeat center center/cover;
+    font-family:Arial, sans-serif;
+    background:url("background.jpg") no-repeat center center/cover;
 }
 
 .overlay{
-    background: rgba(0,0,0,0.85);
+    background:rgba(0,0,0,0.85);
     min-height:100vh;
     text-align:center;
     color:white;
-    padding-top:50px;
+    padding:40px 20px;
 }
 
-/* Logo */
+/* LOGO */
 .logo{
-    width:140px;
+    width:150px;
     margin-bottom:20px;
-    filter: drop-shadow(0 0 15px #00ffcc);
+    filter: drop-shadow(0 0 20px #00ffcc);
 }
 
-/* Headings */
-h1{
+/* HEADINGS */
+h1,h2{
     color:#00ffcc;
-    text-shadow: 0 0 20px #00ffcc;
+    text-shadow:0 0 20px #00ffcc;
 }
 
-/* Social buttons */
-.social-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin:20px 0;
-}
-
-.social-btn{
-    display:flex;
+/* TikTok Button */
+.tiktok-btn{
+    display:inline-flex;
     align-items:center;
     gap:10px;
+    padding:12px 25px;
+    margin:15px;
     background:#111;
-    padding:12px 20px;
-    border-radius:10px;
-    text-decoration:none;
     color:white;
-    font-weight:bold;
-    box-shadow: 0 0 5px #00ffcc;
+    text-decoration:none;
+    border-radius:10px;
+    box-shadow:0 0 10px #00ffcc;
     transition:0.3s;
 }
 
-.social-btn:hover{
-    box-shadow: 0 0 25px #00ffcc, 0 0 50px #00ffcc inset;
-    transform: scale(1.05);
+.tiktok-btn img{
+    width:22px;
 }
 
-.social-icon{
-    width:24px;
+.tiktok-btn:hover{
+    box-shadow:0 0 30px #00ffcc;
+    transform:scale(1.05);
 }
 
-/* Enter button */
-.enter-btn{
-    padding:15px 35px;
-    margin-top:25px;
+/* Buttons */
+.enter-btn, .register-btn{
+    padding:14px 30px;
     border:none;
     border-radius:10px;
     background:#00ffcc;
     font-weight:bold;
     cursor:pointer;
-    text-shadow:0 0 10px #00ffcc;
+    margin-top:20px;
     transition:0.3s;
 }
 
-.enter-btn:hover{
+.enter-btn:hover, .register-btn:hover{
     background:white;
     box-shadow:0 0 30px #00ffcc;
 }
 
-/* Registration form */
-.form-section{
-    display:none;
-    padding:20px;
-}
-
-input, select{
+/* Inputs */
+select, input{
     width:90%;
     padding:12px;
     margin:10px 0;
@@ -89,30 +76,9 @@ input, select{
     border:none;
 }
 
-.submit-btn{
-    width:50%;
-    padding:12px;
-    margin-top:15px;
-    background:#00ffcc;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-    border:none;
-    border-radius:10px;
-    text-shadow:0 0 10px #00ffcc;
-}
-
-.submit-btn:hover{
-    background:white;
-    box-shadow:0 0 25px #00ffcc;
-}
-
 /* Responsive */
 @media(max-width:600px){
-    input, select{
-        width:95%;
-    }
-    .enter-btn, .submit-btn{
-        width:70%;
+    select, input{
+        width:100%;
     }
 }
