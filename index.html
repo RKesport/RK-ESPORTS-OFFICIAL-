@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>RK ESPORTS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RK ESPORTS</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="overlay">
-
-    <!-- HOME PAGE -->
-    <div id="home">
-        <img src="logo.png" class="logo">
-        <h1>RK ESPORTS</h1>
-
-        <a href="https://vm.tiktok.com/ZS9JnSgar8Jv5-nyNjn/" target="_blank" class="tiktok-btn">
-            <img src="tiktok.png"> Follow TikTok
-        </a>
-
-        <button class="enter-btn" onclick="showForm()">ENTER TO REGISTER</button>
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+    <div class="loader-box">
+        <div class="loader"></div>
+        <p>LOADING...</p>
     </div>
+</div>
 
-    <!-- REGISTRATION PAGE -->
-    <div id="registration" style="display:none;">
+<!-- HOME PAGE -->
+<section id="home">
+    <img src="logo.png" class="logo">
+    <h1>RK ESPORTS</h1>
 
-        <h2>PUBG Tournament Registration</h2>
+    <a href="https://vm.tiktok.com/ZS9JnSgar8Jv5-nyNjn/" target="_blank" class="tiktok-btn">
+        <img src="tiktok.png"> Follow TikTok
+    </a>
 
+    <button onclick="startLoading()" class="enter-btn">ENTER TO REGISTER</button>
+</section>
+
+<!-- REGISTRATION PAGE -->
+<section id="registration">
+
+    <h2>PUBG TOURNAMENT REGISTRATION</h2>
+
+    <div class="card">
         <select id="map">
             <option value="">Select Map</option>
             <option>Erangel</option>
@@ -40,14 +47,14 @@
             <option>Squad</option>
         </select>
 
-        <!-- Dynamic Player Fields -->
         <div id="players"></div>
 
-        <button class="register-btn" onclick="sendToWhatsapp()">REGISTER</button>
-
+        <button onclick="sendToWhatsapp()" class="register-btn">
+            <img src="Whatsapp.png"> REGISTER NOW
+        </button>
     </div>
 
-</div>
+</section>
 
 <script src="script.js"></script>
 </body>
