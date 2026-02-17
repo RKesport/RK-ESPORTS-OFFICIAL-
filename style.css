@@ -1,75 +1,106 @@
 body{
     margin:0;
-    padding:0;
     font-family:Arial, sans-serif;
     background:url("background.jpg") no-repeat center center/cover;
+    color:white;
 }
 
-.overlay{
+/* Dark Overlay */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
     background:rgba(0,0,0,0.85);
-    min-height:100vh;
-    text-align:center;
-    color:white;
-    padding:40px 20px;
+    z-index:-1;
 }
 
-/* LOGO */
-.logo{
-    width:150px;
-    margin-bottom:20px;
-    filter: drop-shadow(0 0 20px #00ffcc);
-}
-
-/* HEADINGS */
-h1,h2{
-    color:#00ffcc;
-    text-shadow:0 0 20px #00ffcc;
-}
-
-/* TikTok Button */
-.tiktok-btn{
-    display:inline-flex;
+/* Loading Screen */
+#loading-screen{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#0d0d0d;
+    display:none;
+    justify-content:center;
     align-items:center;
-    gap:10px;
-    padding:12px 25px;
-    margin:15px;
-    background:#111;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    box-shadow:0 0 10px #00ffcc;
-    transition:0.3s;
+    flex-direction:column;
+    z-index:999;
 }
 
-.tiktok-btn img{
-    width:22px;
+.loader{
+    border:5px solid #222;
+    border-top:5px solid #00ffc8;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    animation:spin 1s linear infinite;
 }
 
-.tiktok-btn:hover{
-    box-shadow:0 0 30px #00ffcc;
-    transform:scale(1.05);
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+/* HOME */
+#home{
+    text-align:center;
+    padding-top:80px;
+}
+
+.logo{
+    width:160px;
+    filter:drop-shadow(0 0 25px #00ffc8);
+}
+
+h1,h2{
+    text-align:center;
+    text-shadow:0 0 20px #00ffc8;
+    color:#00ffc8;
 }
 
 /* Buttons */
-.enter-btn, .register-btn{
+.tiktok-btn, .enter-btn, .register-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
     padding:14px 30px;
+    margin:15px;
+    background:linear-gradient(45deg,#00ffc8,#007bff);
     border:none;
-    border-radius:10px;
-    background:#00ffcc;
-    font-weight:bold;
+    border-radius:12px;
     cursor:pointer;
-    margin-top:20px;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+    box-shadow:0 0 20px #00ffc8;
     transition:0.3s;
 }
 
-.enter-btn:hover, .register-btn:hover{
-    background:white;
-    box-shadow:0 0 30px #00ffcc;
+.tiktok-btn:hover,
+.enter-btn:hover,
+.register-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px #00ffc8;
 }
 
-/* Inputs */
+/* Registration Card */
+#registration{
+    display:none;
+    padding:50px 20px;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:rgba(20,20,20,0.9);
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 30px #00ffc8;
+}
+
 select, input{
-    width:90%;
+    width:100%;
     padding:12px;
     margin:10px 0;
     border-radius:8px;
@@ -78,7 +109,5 @@ select, input{
 
 /* Responsive */
 @media(max-width:600px){
-    select, input{
-        width:100%;
-    }
+    .card{width:90%;}
 }
