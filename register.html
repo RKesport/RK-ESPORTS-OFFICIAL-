@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RK ESPORTS | Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="rk">RK</span>
+      <span class="esports">ESPORTS</span>
+    </div>
+    <nav>
+      <button onclick="location.href='home.html'">Home</button>
+      <button onclick="location.href='schedule.html'">Schedule</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>PLAYER REGISTRATION</h1>
+
+    <form id="registrationForm">
+      <input type="text" id="playerName" placeholder="Player Name" required>
+      <input type="text" id="inGameID" placeholder="In-Game ID" required>
+      <input type="text" id="teamName" placeholder="Team Name (if any)">
+      
+      <label for="map">Select Map:</label>
+      <select id="map" required>
+        <option value="">Choose Map</option>
+        <option value="Erangel">Erangel</option>
+        <option value="Miramar">Miramar</option>
+        <option value="Livik">Livik</option>
+        <option value="Sanhok">Sanhok</option>
+      </select>
+
+      <label for="mode">Select Mode:</label>
+      <select id="mode" required>
+        <option value="">Choose Mode</option>
+        <option value="Solo">Solo</option>
+        <option value="Duo">Duo</option>
+        <option value="Squad">Squad</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+  <script src="js/register.js"></script>
+</body>
+</html>

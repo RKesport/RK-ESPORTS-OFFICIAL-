@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #121212;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo .rk {
+  font-size: 28px;
+  font-weight: 900;
+  color: #f5c400;
+}
+
+.logo .esports {
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-left: 6px;
+  color: #fff;
+}
+
+nav button {
+  margin-left: 10px;
+  padding: 10px 18px;
+  background: #f5c400;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #ffdb4d;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+main h1 {
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+th {
+  background: #1e1e1e;
+  color: #f5c400;
+}
+
+td {
+  background: #121212;
+  color: #ccc;
+}
+
+button.approve, button.reject {
+  padding: 6px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.approve { background: #28a745; color: #fff; }
+button.reject { background: #dc3545; color: #fff; }
+
+button.approve:hover { background: #45c35d; }
+button.reject:hover { background: #e04c5f; }

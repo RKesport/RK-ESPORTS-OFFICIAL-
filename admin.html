@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RK ESPORTS | Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="rk">RK</span>
+      <span class="esports">ESPORTS</span>
+    </div>
+    <nav>
+      <button onclick="location.href='home.html'">Home</button>
+      <button onclick="location.href='schedule.html'">Schedule</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>ADMIN PANEL - Registrations</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>In-Game ID</th>
+          <th>Team</th>
+          <th>Map</th>
+          <th>Mode</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="registrationTable">
+        <!-- Sample Rows -->
+        <tr>
+          <td>Ali</td>
+          <td>ALI123</td>
+          <td>N/A</td>
+          <td>Erangel</td>
+          <td>Solo</td>
+          <td><button class="approve">Approve</button> <button class="reject">Reject</button></td>
+        </tr>
+        <tr>
+          <td>Bilal</td>
+          <td>BIL456</td>
+          <td>TeamX</td>
+          <td>Miramar</td>
+          <td>Duo</td>
+          <td><button class="approve">Approve</button> <button class="reject">Reject</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

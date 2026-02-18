@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RK ESPORTS | Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/schedule.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="rk">RK</span>
+      <span class="esports">ESPORTS</span>
+    </div>
+    <nav>
+      <button onclick="location.href='home.html'">Home</button>
+      <button onclick="location.href='register.html'">Register</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>TOURNAMENT SCHEDULE</h1>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('red')">Group Red</button>
+      <button class="tab-btn" onclick="showTab('green')">Group Green</button>
+      <button class="tab-btn" onclick="showTab('overall')">Overall</button>
+    </div>
+
+    <div class="tab-content" id="red">
+      <table>
+        <tr><th>Match</th><th>Date</th><th>Time</th></tr>
+        <tr><td>Match 1</td><td>Feb 20</td><td>5:00 PM</td></tr>
+        <tr><td>Match 2</td><td>Feb 21</td><td>6:00 PM</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content" id="green" style="display:none">
+      <table>
+        <tr><th>Match</th><th>Date</th><th>Time</th></tr>
+        <tr><td>Match 1</td><td>Feb 20</td><td>7:00 PM</td></tr>
+        <tr><td>Match 2</td><td>Feb 21</td><td>8:00 PM</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content" id="overall" style="display:none">
+      <table>
+        <tr><th>Match</th><th>Date</th><th>Time</th></tr>
+        <tr><td>Match 1</td><td>Feb 20</td><td>5:00 PM</td></tr>
+        <tr><td>Match 2</td><td>Feb 21</td><td>6:00 PM</td></tr>
+        <tr><td>Match 3</td><td>Feb 21</td><td>7:00 PM</td></tr>
+      </table>
+    </div>
+
+  </main>
+
+  <script src="js/schedule.js"></script>
+</body>
+</html>

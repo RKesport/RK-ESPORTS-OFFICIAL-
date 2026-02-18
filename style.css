@@ -1,113 +1,82 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:url("background.jpg") no-repeat center center/cover;
-    color:white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Dark Overlay */
-body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.85);
-    z-index:-1;
+body {
+  background: #0b0b0b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-/* Loading Screen */
-#loading-screen{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:#0d0d0d;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:999;
+.login-container {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
 }
 
-.loader{
-    border:5px solid #222;
-    border-top:5px solid #00ffc8;
-    border-radius:50%;
-    width:60px;
-    height:60px;
-    animation:spin 1s linear infinite;
+.logo {
+  margin-bottom: 40px;
 }
 
-@keyframes spin{
-    0%{transform:rotate(0deg);}
-    100%{transform:rotate(360deg);}
+.logo .rk {
+  display: block;
+  font-size: 48px;
+  font-weight: 900;
+  color: #f5c400;
 }
 
-/* HOME */
-#home{
-    text-align:center;
-    padding-top:80px;
+.logo .esports {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #ffffff;
 }
 
-.logo{
-    width:160px;
-    filter:drop-shadow(0 0 25px #00ffc8);
+.login-box {
+  background: #121212;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
 }
 
-h1,h2{
-    text-align:center;
-    text-shadow:0 0 20px #00ffc8;
-    color:#00ffc8;
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
 }
 
-/* Buttons */
-.tiktok-btn, .enter-btn, .register-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:14px 30px;
-    margin:15px;
-    background:linear-gradient(45deg,#00ffc8,#007bff);
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    font-weight:bold;
-    color:white;
-    text-decoration:none;
-    box-shadow:0 0 20px #00ffc8;
-    transition:0.3s;
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 4px;
+  outline: none;
 }
 
-.tiktok-btn:hover,
-.enter-btn:hover,
-.register-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 40px #00ffc8;
+.login-box input:focus {
+  border-color: #f5c400;
 }
 
-/* Registration Card */
-#registration{
-    display:none;
-    padding:50px 20px;
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #f5c400;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
-.card{
-    max-width:500px;
-    margin:auto;
-    background:rgba(20,20,20,0.9);
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 0 30px #00ffc8;
-}
-
-select, input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:8px;
-    border:none;
-}
-
-/* Responsive */
-@media(max-width:600px){
-    .card{width:90%;}
+.login-box button:hover {
+  background: #ffdb4d;
 }
